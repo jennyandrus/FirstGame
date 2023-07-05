@@ -1,0 +1,54 @@
+#dino {
+    position: absolute;
+    bottom:    60%; /* Adjust the value to move the dinosaur lower */
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url('dino.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@keyframes dino-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#dino:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+}
+
+#dino:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 50px;
+    background-color: red;
+}
+
